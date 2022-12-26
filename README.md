@@ -1,4 +1,4 @@
-基于bootstrap的多功能选项卡插件
+Multifunctional tab plugin based on bootstrap
 
 ![](screenshot/1.png)
 ![](screenshot/2.png)
@@ -6,13 +6,13 @@
 
 
 
-# 其他依赖
-> 滚动条 jquery.scrollbar
-> 图标 font-awesome
+# other dependencies
+> Scrollbar jquery.scrollbar
+> icon font-awesome
 
-# 背景
-开发项目时需要一款多选项卡的插件，网上搜寻了一番，基本都是太丑陋、太古老、功能太少、BUG多、集成在框架中的混淆版。均无法满足本人需求，所以，只能自己动手造一个。根据自己的需求写了这款插件，插件功能定位主要是满足我个人需求，有更多需求的可以自己添加修改，如果有写的不好的地方或者存在BUG欢迎提issues，如果你觉得对你有用，请来个start。
-# 使用说明
+# background
+When developing a project, I need a multi-tab plug-in. After searching on the Internet, it is basically a confusing version that is too ugly, too old, has too few functions, has many bugs, and is integrated in the framework. None of them can meet my needs, so I can only make one myself. I wrote this plug-in according to my own needs. The function positioning of the plug-in is mainly to meet my personal needs. If you have more needs, you can add and modify it yourself. If there is a bad writing or a BUG, please raise issues. If you think it is right for you Useful, please start.
+# Instructions for use
 ## CSS
 ```
 <link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -32,135 +32,135 @@
 ```
 <div class="nth-tabs" id="custom-id"></div>
 ```
-## 初始化
+## Initialization
 ```
 nthTabs = $("#custom-id").nthTabs();
 ```
-## 新建选项卡
+## New tab
 ```
 nthTabs.addTab({
-    id: 'menu-manage',
-    title: '菜单管理',
-    content: '这是菜单管理页面~',
-    //url: "http://www.nethuige.com",
-    active: true, // 是否激活状态，默认是
-    allowClose: true, //是否可关闭，默认是
-    location: false, //是否自动定位，默认是
-    fadeIn: true //是否开启淡入淡出效果，默认是
+     id: 'menu-manage',
+     title: 'Menu Management',
+     content: 'This is the menu management page~',
+     //url: "http://www.nethuige.com",
+     active: true, // Whether to activate the state, the default is
+     allowClose: true, //Whether it can be closed, the default is
+     location: false, //Whether to automatically locate, the default is
+     fadeIn: true //Whether to enable the fade in and fade out effect, the default is
 });
 ```
-## 快速新建一个自定义内容选项卡
+## Quickly create a new custom content tab
 ```
 nthTabs.addTab({
-    id: "web-site",
-    title: 'URL选项卡',
-    url: "http://www.nethuige.com"
+     id: "web-site",
+     title: 'URL tab',
+     url: "http://www.nethuige.com"
 });
 ```
-## 快速新建一个自定义URL选项卡
+## Quickly create a custom URL tab
 ```
 nthTabs.addTab({
-    id: "web-site",
-    title: 'URL选项卡-' + id,
-    url: "http://www.nethuige.com"
+     id: "web-site",
+     title: 'URL tab-' + id,
+     url: "http://www.nethuige.com"
 });
 ```
-## 新建一个不可关闭的选项卡
+## Create a new unclosable tab
 ```
 nthTabs.addTab({
-    id: 'home',
-    title: '首页',
-    content: '这里是首页',
-    allowClose: false
+     id: 'home',
+     title: 'Home',
+     content: 'Here is the home page',
+     allowClose: false
 });
 ```
-## 新建一个非活动状态的选项卡
+## Create a new inactive tab
 ```
 nthTabs.addTab({
-    id: 'role-manage',
-    title: '角色管理',
-    active: false,
-    content: '这是角色管理页面~'
+     id: 'role-manage',
+     title: 'Role Management',
+     active: false,
+     content: 'This is the role management page~'
 });
 ```
-## 新建多个选项卡-连贯操作
+## Create multiple tabs - continuous operation
 ```
 nthTabs.addTab({
-    id: 'menu-manage',
-    title: '菜单管理',
-    active: false,
-    content: '这是菜单管理页面~'
+     id: 'menu-manage',
+     title: 'Menu Management',
+     active: false,
+     content: 'This is the menu management page~'
 }).addTab({
-    id: 'role-manage',
-    title: '角色管理',
-    active: false,
-    content: '这是角色管理页面~'
+     id: 'role-manage',
+     title: 'Role Management',
+     active: false,
+     content: 'This is the role management page~'
 });
 ```
-## 新建多个选项卡-批量操作
+## Create multiple tabs - batch operation
 ```
 nthTabs.addTabs([{
-    id: 'user-manage',
-    title: '用户管理',
-    content: '这是用户管理页面~'
+     id: 'user-manage',
+     title: 'User Management',
+     content: 'This is the user management page~'
 }, {
-    id: 'auth-manage',
-    title: '权限管理',
-    content: '这是权限管理页面~'
+     id: 'auth-manage',
+     title: 'Privilege Management',
+     content: 'This is the permission management page~'
 }]);
 ```
-## 删除一个选项卡
+## Delete a tab
 ```
 nthTabs.delTab('id');
 ```
-## 删除其他选项卡
+## Remove other tabs
 ```
-nthTabs.delOtherTab();
+nthTabs. delOtherTab();
 ```
-## 删除所有选项卡
+## Delete all tabs
 ```
-nthTabs.delAllTab();
+nthTabs. delAllTab();
 ```
-## 激活指定选项卡
+## Activate the specified tab
 ```
 nthTabs.setActTab(id);
 ```
-## 切换到指定选项卡
+## Switch to the specified tab
 ```
 nthTabs.toggleTab(id);
 ```
-## 定位到当前选项卡
+## Navigate to the current tab
 ```
-nthTabs.locationTab();
+nthTabs. locationTab();
 ```
-## 左滑动
+## Swipe left
 ```
 $('.roll-nav-left').click();
 ```
-## 右滑动
+## Swipe right
 ```
 $('.roll-nav-right').click();
 ```
-## 获取左右滑动步值
+## Get left and right sliding step value
 ```
 nthTabs.getMarginStep();
 ```
-## 获取当前选项卡ID
+## Get the current tab ID
 ```
 nthTabs.getActiveId();
 ```
-## 获取所有选项卡宽度
+## Get all tab widths
 ```
 nthTabs.getAllTabWidth();
 ```
-## 获取所有选项卡
+## Get all tabs
 ```
-nthTabs.getTabList();
+nthTabs. getTabList();
 ```
-## 获取指定选项卡是否存在
+## Get whether the specified tab exists
 ```
 nthTabs.isExistsTab();
 ```
 
-## 打赏
+## tip
 <img src="https://s1.ax1x.com/2018/09/14/iEM5Y8.jpg" height="370" width="300">
