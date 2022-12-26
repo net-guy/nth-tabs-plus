@@ -1,4 +1,4 @@
-Multifunctional tab plugin based on bootstrap
+# Multifunctional tab plugin based on bootstrap
 
 ![](screenshot/1.png)
 ![](screenshot/2.png)
@@ -6,12 +6,14 @@ Multifunctional tab plugin based on bootstrap
 
 
 
-# other dependencies
-> Scrollbar jquery.scrollbar
-> icon font-awesome
+## Dependencies
+  - Scrollbar: jQuery Scrollbar
+  - Icons: Font Awesome
 
-# background
-When developing a project, I need a multi-tab plug-in. After searching on the Internet, it is basically a confusing version that is too ugly, too old, has too few functions, has many bugs, and is integrated in the framework. None of them can meet my needs, so I can only make one myself. I wrote this plug-in according to my own needs. The function positioning of the plug-in is mainly to meet my personal needs. If you have more needs, you can add and modify it yourself. If there is a bad writing or a BUG, please raise issues. If you think it is right for you Useful, please start.
+## Background
+
+While developing a project, I needed a multi-tab plug-in. After searching the Internet, I found a really confusing version that was too ugly, too old, has too few functions, has many bugs, and is integrated into an existing framework. Nothing I found met my needs, so I made it myself. I wrote this plug-in according to my own needs. If you have any ideas, you can add and modify it yourself and make a pull request. If there is a bad code or a bug in my code, please raise an issue in the github repo. If you think this is a good fit for your project, please use it.
+
 # Instructions for use
 ## CSS
 ```
